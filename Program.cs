@@ -20,6 +20,11 @@ namespace CodeFirstDemo
                 context.Students.AddRange(newStudents);
                 context.Courses.AddRange(newcourses);
                 context.SaveChanges();
+                var student=context.Students.ToList();
+                foreach(var s in student)
+                {
+                    Console.WriteLine(s.Name);
+                }
                 
                 
 

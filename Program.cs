@@ -11,11 +11,8 @@ namespace CodeFirstDemo
 
             using (var context = new SchoolContext())
             {
-                var data = context.Students.FromSqlRaw("SELECT * FROM Students").ToList<Student>();
-                foreach (var obj in data)
-                {
-                    Console.WriteLine(obj.Name);
-                }
+                int data = context.Database.ExecuteSqlRaw("Update Students Set Name='Hari' Where StudentId=4");
+                Console.WriteLine(data);
 
 
 

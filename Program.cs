@@ -11,7 +11,7 @@ namespace CodeFirstDemo
 
             using (var context = new SchoolContext())
             {
-                int data = context.Database.ExecuteSqlRaw("Update Students Set Name='Hari' Where StudentId=4");
+                int data = context.Database.ExecuteSqlRaw("Insert into Students(Name) values('Hary')");
                 Console.WriteLine(data);
 
 
